@@ -4,16 +4,16 @@ import 'package:flutter_menu_list/flutter_menu_list.dart';
 class ListSection extends StatelessWidget {
   final Widget title;
 
-  final List<ListMenu> listMenus;
+  final List<Widget> menus;
 
   const ListSection({
     this.title = const ListTitle(),
-    required this.listMenus,
+    required this.menus,
   });
 
   @override
   Widget build(BuildContext context) {
-    final list = [title, ...listMenus];
+    final list = [title, ...menus];
     return ListView.separated(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),
