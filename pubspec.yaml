@@ -2,7 +2,7 @@ name: flutter_menu_list
 description: simple flutter menu list.
 version: 0.0.1
 author:
-homepage:
+homepage: https://github.com/naoki0719/flutter_menu_list
 
 environment:
   sdk: ">=2.12.0 <3.0.0"
