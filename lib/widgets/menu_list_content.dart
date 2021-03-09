@@ -134,13 +134,13 @@ class _ListMenuTrailing extends StatelessWidget {
 }
 
 class _ListAppleStyleTitle extends StatelessWidget {
-  final Widget title;
-  final Widget? subTitle;
-
   const _ListAppleStyleTitle({
     required this.title,
     this.subTitle,
   });
+
+  final Widget title;
+  final Widget? subTitle;
 
   @override
   Widget build(BuildContext context) {
@@ -151,7 +151,7 @@ class _ListAppleStyleTitle extends StatelessWidget {
             child: title,
           ),
           if (subTitle != null)
-            SizedBox(
+            const SizedBox(
               width: 15,
             ),
           subTitle ?? Container(),

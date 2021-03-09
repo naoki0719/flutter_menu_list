@@ -2,6 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_menu_list/flutter_menu_list.dart';
 
 class MenuListContainer extends StatelessWidget {
+  const MenuListContainer({
+    required this.sections,
+    this.sectionSpace = 30,
+    this.theme,
+    this.darkTheme,
+  });
+
   final List<Widget> sections;
 
   /// Default: `30`
@@ -9,13 +16,6 @@ class MenuListContainer extends StatelessWidget {
 
   final ThemeData? theme;
   final ThemeData? darkTheme;
-
-  const MenuListContainer({
-    required this.sections,
-    this.sectionSpace = 30,
-    this.theme,
-    this.darkTheme,
-  });
 
   ThemeData _getThemeData(BuildContext context) {
     if (Theme.of(context).brightness == Brightness.dark) {

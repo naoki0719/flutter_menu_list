@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 
 class MenuListSectionTitle extends StatelessWidget {
-  final String title;
-  final EdgeInsetsGeometry padding;
-  final TextStyle textStyle;
-
   const MenuListSectionTitle({
     required this.title,
     this.padding = const EdgeInsets.only(
@@ -18,10 +14,14 @@ class MenuListSectionTitle extends StatelessWidget {
     ),
   });
 
+  final String title;
+  final EdgeInsetsGeometry padding;
+  final TextStyle textStyle;
+
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.transparent),
+      decoration: const BoxDecoration(color: Colors.transparent),
       padding: padding,
       child: Text(
         title,

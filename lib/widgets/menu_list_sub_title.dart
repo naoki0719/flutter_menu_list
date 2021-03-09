@@ -3,15 +3,15 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 
 class MenuListSubTitle extends StatelessWidget {
-  final String text;
-  final TextStyle? textStyle;
-  final EdgeInsetsGeometry? padding;
-
   const MenuListSubTitle(
     this.text, {
     this.textStyle,
     this.padding,
   });
+
+  final String text;
+  final TextStyle? textStyle;
+  final EdgeInsetsGeometry? padding;
 
   @override
   Widget build(BuildContext context) {
