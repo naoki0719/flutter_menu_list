@@ -1,7 +1,7 @@
 name: flutter_menu_list
 description: simple flutter menu list.
 version: 0.0.1
-author:
+author: naoki0719
 homepage: https://github.com/naoki0719/flutter_menu_list
 
 environment:
@@ -15,5 +15,6 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  pedantic: 1.8.0+1
 
 flutter:
