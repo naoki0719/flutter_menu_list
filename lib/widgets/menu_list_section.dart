@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_menu_list/flutter_menu_list.dart';
 
-class ListSection extends StatelessWidget {
+class MenuListSection extends StatelessWidget {
   final Widget title;
 
   final List<Widget> menus;
 
-  const ListSection({
-    this.title = const ListTitle(),
+  final double lineIndent;
+
+  const MenuListSection({
+    this.title = const MenuListSectionTitle(title: ''),
     required this.menus,
+    this.lineIndent = 45,
   });
 
   @override
@@ -20,7 +23,7 @@ class ListSection extends StatelessWidget {
       itemBuilder: (context, index) => list[index],
       separatorBuilder: (context, index) {
         if (index > 0) {
-          return Divider(height: 0, indent: 30);
+          return Divider(thickness: 1, height: 0, indent: lineIndent);
         }
         return Container();
       },
