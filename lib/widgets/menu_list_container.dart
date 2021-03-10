@@ -39,7 +39,6 @@ class MenuListContainer extends StatelessWidget {
       data: themeData,
       child: Container(
         color: themeData.backgroundColor,
-        height: double.infinity,
         child: ListView.separated(
           shrinkWrap: true,
           itemBuilder: (context, index) => sections[index],
