@@ -70,80 +70,82 @@ class Example extends StatelessWidget {
           ],
         ),
       ),
-      ),
-      body: MenuListContainer(
-        sections: [
-          MenuListSection(
-            title: const MenuListSectionTitle(title: 'First Title'),
-            menus: [
-              MenuListContent(
-                leading: const Icon(
-                  Icons.ac_unit,
-                  color: Colors.white,
-                  size: 20,
-                ),
-                title: const Text('Title1'),
-                onTap: () {},
-              ),
-              MenuListContent(
-                title: const Text('Title2'),
-                onTap: () {},
-              ),
-            ],
-          ),
-          MenuListSection(
-            title: const MenuListSectionTitle(title: 'Second Title'),
-            menus: [
-              MenuListContent(
-                title: const Text('Display of very long titles'),
-                subTitle:
-                    const MenuListSubTitle('Display of very long sub titles'),
-                onTap: () {},
-              ),
-              MenuListContent(
-                title: const Text('Title4'),
-                trailing: SizedBox(
-                  height: 20,
-                  child: CupertinoSwitch(
-                    value: true,
-                    onChanged: (value) {},
+      body: SizedBox(
+        height: double.infinity,
+        child: MenuListContainer(
+          sections: [
+            MenuListSection(
+              title: const MenuListSectionTitle(title: 'First Title'),
+              menus: [
+                MenuListContent(
+                  leading: const Icon(
+                    Icons.ac_unit,
+                    color: Colors.white,
+                    size: 20,
                   ),
+                  title: const Text('Title1'),
+                  onTap: () {},
                 ),
-              ),
-            ],
-          ),
-          MenuListSection(
-            title: const MenuListSectionTitle(
-              title: 'Third Title',
-              padding: EdgeInsets.only(
-                left: 15,
-                top: 8,
-                bottom: 8,
-              ),
+                MenuListContent(
+                  title: const Text('Title2'),
+                  onTap: () {},
+                ),
+              ],
             ),
-            lineIndent: 0,
-            menus: [
-              MenuListContent(
-                leadingSpace: 15,
-                title: const Text('Display of very long titles'),
-                subTitle:
-                    const MenuListSubTitle('Display of very long sub titles'),
-                onTap: () {},
-              ),
-              MenuListContent(
-                leadingSpace: 15,
-                title: const Text('Title4'),
-                trailing: SizedBox(
-                  height: 20,
-                  child: CupertinoSwitch(
-                    value: true,
-                    onChanged: (value) {},
+            MenuListSection(
+              title: const MenuListSectionTitle(title: 'Second Title'),
+              menus: [
+                MenuListContent(
+                  title: const Text('Display of very long titles'),
+                  subTitle:
+                      const MenuListSubTitle('Display of very long sub titles'),
+                  onTap: () {},
+                ),
+                MenuListContent(
+                  title: const Text('Title4'),
+                  trailing: SizedBox(
+                    height: 20,
+                    child: CupertinoSwitch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
                   ),
                 ),
+              ],
+            ),
+            MenuListSection(
+              title: const MenuListSectionTitle(
+                title: 'Third Title',
+                padding: EdgeInsets.only(
+                  left: 15,
+                  top: 8,
+                  bottom: 8,
+                ),
               ),
-            ],
-          ),
-        ],
+              lineIndent: 0,
+              menus: [
+                MenuListContent(
+                  leadingSpace: 15,
+                  title: const Text('Display of very long titles'),
+                  subTitle:
+                      const MenuListSubTitle('Display of very long sub titles'),
+                  onTap: () {},
+                ),
+                MenuListContent(
+                  leadingSpace: 15,
+                  title: const Text('Title4'),
+                  trailing: SizedBox(
+                    height: 20,
+                    child: CupertinoSwitch(
+                      value: true,
+                      onChanged: (value) {},
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
