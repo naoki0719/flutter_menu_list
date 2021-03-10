@@ -2,7 +2,7 @@
 
 A widget that provides a simple menu list.
 
-<img src="https://raw.githubusercontent.com/naoki0719/flutter_menu_list/master/resources/example.gif" />
+<img src="https://raw.githubusercontent.com/naoki0719/flutter_menu_list/master/resources/example.png" />
 
 ## Features
 
@@ -10,6 +10,8 @@ A widget that provides a simple menu list.
 - Support for dark themes
 
 ## Usage
+
+### Simple
 
 ```dart
 import 'package:flutter_menu_list/flutter_menu_list.dart';
@@ -83,6 +85,39 @@ MenuListContainer(
           ),
         ),
       ],
+    ),
+  ],
+);
+```
+
+### In Column
+
+```dart
+Column(
+  children: [
+    Container(
+      padding: const EdgeInsets.all(10),
+      child: const Text(
+        'Example App',
+        style: TextStyle(
+          fontSize: 20,
+        ),
+      ),
+    ),
+    /// Wrapping it up is important.
+    const Expanded(
+      child: MenuListContainer(
+        sections: [
+          MenuListSection(
+            title: MenuListSectionTitle(title: 'Drawer Menu'),
+            menus: [
+              MenuListContent(
+                title: Text('Title'),
+              ),
+            ],
+          )
+        ],
+      ),
     ),
   ],
 );

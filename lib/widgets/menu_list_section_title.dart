@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
+/// Provides a widget for the title of an optimized section.
 class MenuListSectionTitle extends StatelessWidget {
   const MenuListSectionTitle({
+    Key? key,
     required this.title,
     this.padding = const EdgeInsets.only(
       top: 8.0,
@@ -12,7 +14,7 @@ class MenuListSectionTitle extends StatelessWidget {
     this.textStyle = const TextStyle(
       color: Color(0x8AFFFFFF),
     ),
-  });
+  }) : super(key: key);
 
   final String title;
   final EdgeInsetsGeometry padding;

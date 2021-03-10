@@ -3,15 +3,19 @@ import 'package:flutter_menu_list/flutter_menu_list.dart';
 
 class MenuListSection extends StatelessWidget {
   const MenuListSection({
+    Key? key,
     this.title = const MenuListSectionTitle(title: ''),
     required this.menus,
     this.lineIndent = 45,
-  });
+  }) : super(key: key);
 
   final Widget title;
 
+  /// It is recommended to use [MenuListContent],
+  /// but you can also use a customized widget.
   final List<Widget> menus;
 
+  /// Indenting [Divider] Lines
   final double lineIndent;
 
   @override

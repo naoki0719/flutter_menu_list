@@ -5,9 +5,10 @@ import 'package:flutter/material.dart';
 class MenuListSubTitle extends StatelessWidget {
   const MenuListSubTitle(
     this.text, {
+    Key? key,
     this.textStyle,
     this.padding,
-  });
+  }) : super(key: key);
 
   final String text;
   final TextStyle? textStyle;

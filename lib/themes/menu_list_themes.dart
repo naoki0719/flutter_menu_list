@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+/// Provides a default theme for the menu list.
 class MenuListThemes {
+  /// Default dark theme.
   static final darkTheme = ThemeData(
     backgroundColor: const Color(0x8A000000),
     primaryColor: const Color(0xFF212121),
@@ -29,6 +31,7 @@ class MenuListThemes {
     dividerColor: const Color(0xFF424242),
   );
 
+  /// Default light theme.
   static final lightTheme = ThemeData(
     backgroundColor: const Color(0xFFEEEEEE),
     primaryColor: const Color(0xFFFFFFFF),
