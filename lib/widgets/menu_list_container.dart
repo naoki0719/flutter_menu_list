@@ -34,6 +34,7 @@ class MenuListContainer extends StatelessWidget {
         color: themeData.backgroundColor,
         height: double.infinity,
         child: ListView.separated(
+          shrinkWrap: true,
           itemBuilder: (context, index) => sections[index],
           separatorBuilder: (context, index) => SizedBox(
             height: sectionSpace,

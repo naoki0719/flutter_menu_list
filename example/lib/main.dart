@@ -24,6 +24,37 @@ class Example extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: SafeArea(
+          child: Column(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(10),
+                child: const Text(
+                  'Example App',
+                  style: TextStyle(
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+              const Expanded(
+                child: MenuListContainer(
+                  sections: [
+                    MenuListSection(
+                      title: MenuListSectionTitle(title: 'Drawer Menu'),
+                      menus: [
+                        MenuListContent(
+                          title: Text('Title'),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
       body: MenuListContainer(
         sections: [
           MenuListSection(
