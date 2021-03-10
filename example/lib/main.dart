@@ -30,19 +30,30 @@ class Example extends StatelessWidget {
         title: const Text('Flutter Menu List'),
       ),
       drawer: Drawer(
-          child: Column(
-            children: [
-              Container(
-                padding: const EdgeInsets.all(10),
-                child: const Text(
-                  'Example App',
-                  style: TextStyle(
-                    fontSize: 20,
-                  ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Container(
+              color: Theme.of(context).backgroundColor,
+              padding: const EdgeInsets.all(20),
+              child: const SafeArea(
+                child: Center(
+                  child: Text('Test'),
                 ),
+                bottom: false,
               ),
-              const Expanded(
-                child: MenuListContainer(
+            ),
+            const Divider(
+              height: 0,
+              color: Color(0xFFEEEEEE),
+            ),
+            Expanded(
+              child: MediaQuery.removePadding(
+                context: context,
+                removeTop: true,
+                child: const MenuListContainer(
                   sections: [
                     MenuListSection(
                       title: MenuListSectionTitle(title: 'Drawer Menu'),
@@ -55,9 +66,10 @@ class Example extends StatelessWidget {
                   ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
+      ),
       ),
       body: MenuListContainer(
         sections: [
