@@ -11,9 +11,7 @@ class MenuListSectionTitle extends StatelessWidget {
       left: 45.0,
       right: 15.0,
     ),
-    this.textStyle = const TextStyle(
-      color: Color(0x8AFFFFFF),
-    ),
+    this.textStyle = const TextStyle(),
   }) : super(key: key);
 
   final String title;
