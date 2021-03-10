@@ -26,8 +26,10 @@ class Example extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text('Flutter Menu List'),
+      ),
       drawer: Drawer(
-        child: SafeArea(
           child: Column(
             children: [
               Container(
