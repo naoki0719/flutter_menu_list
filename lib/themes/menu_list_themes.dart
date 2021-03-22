@@ -55,6 +55,6 @@ class MenuListThemes {
       size: 16,
       color: Color(0xFF37474F),
     ),
-    dividerColor: const Color(0xFF37474F),
+    dividerColor: const Color(0xFFE0E0E0),
   );
 }
