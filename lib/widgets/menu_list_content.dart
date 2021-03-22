@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 class MenuListContent extends StatelessWidget {
@@ -52,7 +50,7 @@ class MenuListContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ios = iosStyle ?? Platform.isIOS;
+    final ios = iosStyle ?? Theme.of(context).platform == TargetPlatform.iOS;
 
     return Material(
       color: Theme.of(context).primaryColor,

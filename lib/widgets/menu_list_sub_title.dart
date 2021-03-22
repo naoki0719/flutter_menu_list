@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:flutter/material.dart';
 
 class MenuListSubTitle extends StatelessWidget {
@@ -16,7 +14,7 @@ class MenuListSubTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final adaptiveStyle = Platform.isAndroid
+    final adaptiveStyle = Theme.of(context).platform == TargetPlatform.android
         ? Theme.of(context).textTheme.subtitle1
         : Theme.of(context).textTheme.subtitle2;
 
