@@ -1,3 +1,8 @@
+## [0.0.4]
+
+- Corresponds to the web version
+- Change the line color of the light theme to gray
+
 ## [0.0.3]
 
 - Changed to delegate the height of the menu list to the outside of the widget
